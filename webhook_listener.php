@@ -1,4 +1,10 @@
 <?php
+/*
+ * This is an example of a webhook listener that you would place your server.
+ * After you set it up go to: https://www.smartwaiver.com/m/rest/?webhooks and set your Webhook URL to: https://www.YOURDOMAIN.com/webhook_listener.php or whatever you titled this script.
+ */
+
+//YOU MUST SET YOUR API KEY IN THE CONFIG FILE FIRST
 require_once 'config.php';
 
 //make sure all required values are passed
@@ -18,7 +24,7 @@ $api_url = "https://www.smartwaiver.com/api/?rest_request=" . API_KEY . "&rest_u
 
 $api_result = simplexml_load_file($api_url);
 foreach($api_result as $document) {
-    //the next 2 lines are just examples of how to obtains each participant's information.  For a full list of values please go to: https://www.smartwaiver.com/p/API
+    //the next 2 lines are just examples of how to obtain each participant's information.  For a full list of values please go to: https://www.smartwaiver.com/p/API
     $unique_id = $document->unique_id;
     $full_name = $document->firstname . " " . $document->lastname;
 

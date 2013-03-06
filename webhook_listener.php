@@ -1,6 +1,6 @@
 <?php
 /*
- * This is an example of a webhook listener that you would place your server.
+ * This is an example of a webhook listener that you would place on your server.
  * After you set it up go to: https://www.smartwaiver.com/m/rest/?webhooks and set your Webhook URL to: https://www.YOURDOMAIN.com/webhook_listener.php or whatever you titled this script.
  */
 

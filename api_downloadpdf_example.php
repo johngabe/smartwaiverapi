@@ -1,6 +1,6 @@
 <?php
 /*
- * This is a basic API example that will print your ten most recent waiver's unique_id, first & last names
+ * This is a basic API example that will download your most recent waiver's PDF into a local directory
  */
 
 //YOU MUST SET YOUR API KEY IN THE CONFIG FILE FIRST

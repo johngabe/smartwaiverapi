@@ -5,7 +5,7 @@ class ApisController < ApplicationController
   # this controller.
   
   # Disable CSRF checking since the Smartwaiver site will POST to this URL
-  protect_from_forgery :except => [:webhook, :test]
+  protect_from_forgery :except => [:webhook]
   
   def webhook
     

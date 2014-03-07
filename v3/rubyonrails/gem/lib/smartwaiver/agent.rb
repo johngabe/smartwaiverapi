@@ -6,7 +6,7 @@ module Smartwaiver
 
     def initialize(api_key, api_version , rest_limit , base_url )
       
-      raise ArgumentError, "Missing API Key: Add Smartwaiver.api_key = 'your-key-here' to an initializer" if api_key.blank?
+      raise ArgumentError, "Missing API Key: Add Smartwaiver.api_key = 'your-key-here' to an initializer" if api_key.nil?
       @api_key = api_key
       
       @api_version = api_version || "v3"

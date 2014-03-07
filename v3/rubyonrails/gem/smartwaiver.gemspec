@@ -8,5 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'sales@lotuspartners.sg'
   s.files       = ["lib/smartwaiver.rb", "lib/smartwaiver/agent.rb"]
   s.homepage    = 'http://rubygems.org/gems/smartwaiver'
-  s.add_runtime_dependency 'mechanize', ['~> 0']
+  s.add_runtime_dependency 'mechanize', ['~> 2']
+  s.add_runtime_dependency 'active_support', ['~> 3']
 end

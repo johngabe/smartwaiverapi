@@ -1,7 +1,7 @@
 class ApisController < ApplicationController
    def check_ins
-     rest_limit = 1
-     @api_result = Smartwaiver.get_waivers( rest_limit )
+     checkin_limit = 10
+     @api_result = Smartwaiver.get_checkins( checkin_limit )
      if @api_result["checkins"].blank? or @api_result["checkins"]["checkin"].blank?
        @output = "No Waivers found." # if you don't have any waivers it'll fail here
 

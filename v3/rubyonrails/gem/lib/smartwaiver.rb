@@ -15,6 +15,16 @@ module Smartwaiver
     @agent = Agent.new(@@api_key, @@api_version, rest_limit, @@base_url) 
     return @agent.request
   end
+
+
+  # Retrieves checkins from the Smartwaiver API.
+  #
+  # @param [String] rest_limit Number of records to retrieve, eg "10"
+  def self.get_checkins( checkins_limit=10)
+    @agent = Agent.new(@@api_key, @@api_version, false, @@base_url) 
+    return @agent.request("&restapi_checkins=#{checkins_limit}")
+  end
+
   
   # Retrieves individual waiver from the Smartwaiver API.
   #

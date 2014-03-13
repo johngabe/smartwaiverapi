@@ -6,6 +6,12 @@ smartwaiver is a wrapper to access the Smartwaiver API.
 - To use this gem, you will need to login to your Smartwaiver account then go to [apply for an API Key][apply_keys].
 - This gem is a port of the [PHP wrapper][php_wrapper].
 
+## Changelog
+March 2014: Upgrading from version 2 to version 3 of the API
+- introduction of a new Smartwaiver.get_checkins method which enables retrieval of checkin data. A sample controller is available as api_check_ins.rb.
+- introduction of a new configuration setting (webhook_private_key). The webhook listener now checks for an MD5 hash of your webhook private key, where
+previously it had checked for an MD5 hash of your API key.
+
 ## Installation
 Include the gem in your Gemfile:
 ``` ruby

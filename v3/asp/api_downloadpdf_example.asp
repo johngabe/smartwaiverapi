@@ -65,7 +65,7 @@ End If
 'DOWNLOAD EACH WAIVER (You can bulk download up to 100 waivers at a time by modifying &rest_limit above to the desired # of participants)
 For Each participant in participants(0).getElementsByTagName("participant")
    'create the download url
-   download_url = "https://www.smartwaiver.com/api/?rest_request=" & API_KEY & "&restapi_viewpdf=" & participant.getElementsByTagName("pdf_url")(0).childNodes(0).nodeValue
+   download_url = "https://www.smartwaiver.com/api/" & API_VERSION & "/?rest_request=" & API_KEY & "&restapi_viewpdf=" & participant.getElementsByTagName("pdf_url")(0).childNodes(0).nodeValue
    
    'download it
 

@@ -22,7 +22,7 @@ if(!isset($api_result->participants)) {
 //DOWNLOAD EACH WAIVER (You can bulk download up to 100 waivers at a time by modifying &rest_limit above to the desired # of participants)
 foreach($api_result->participants->participant as $participant) {
    //create the download url
-   $download_url = "https://www.smartwaiver.com/api/?rest_request=" . API_KEY . "&restapi_viewpdf=" . $participant->pdf_url;
+   $download_url = "https://www.smartwaiver.com/api/" . API_VERSION . "/?rest_request=" . API_KEY . "&restapi_viewpdf=" . $participant->pdf_url;
    //downlaod it
    $pdf_src = file_get_contents($download_url);
    //check if successful

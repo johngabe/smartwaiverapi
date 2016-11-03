@@ -28,7 +28,7 @@ Response.End
  End If
 
 'check that the credential is correct
-If Request("credential") <> md5(API_KEY & Request("unique_id")) Then
+If Request("credential") <> md5(WEBHOOK_PRIVATE_KEY & Request("unique_id")) Then
  Response.End
  End If
 

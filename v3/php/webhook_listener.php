@@ -24,7 +24,10 @@ $api_url = "https://www.smartwaiver.com/api/" . API_VERSION . "/?rest_request=" 
 
 $api_result = simplexml_load_file($api_url);
 
-if(!$api_result->participants) return false;
+if(!$api_result->participants) {
+	http_response_code(404);  // PHP >= 5.4.0
+	exit;
+}
 
 foreach($api_result->participants->participant as $participant) {
     //the next 3 lines are just examples of how to obtain each participant's information.  For a full list of values please go to: https://www.smartwaiver.com/p/API
@@ -34,3 +37,5 @@ foreach($api_result->participants->participant as $participant) {
 
     //INSERT INTO DATABASE HERE
 }
+http_response_code(200); // PHP >= 5.4.0
+
